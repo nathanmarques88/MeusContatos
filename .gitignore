@@ -1,0 +1,19 @@
+﻿# Gradle
+.gradle/
+build/
+**/build/
+
+# Android
+local.properties
+.externalNativeBuild/
+.cxx/
+
+# Arquivos temporarios
+*.iml
+*.log
+.DS_Store
+Thumbs.db
+
+# APKs e arquivos gerados
+*.apk
+*.aab

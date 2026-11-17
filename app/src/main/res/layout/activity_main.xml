@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F6FB"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp">
+
+    <!-- Cabeçalho -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Meus Contatos"
+        android:textColor="#172B4D"
+        android:textSize="27sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sua agenda pessoal"
+        android:textColor="#718096"
+        android:textSize="14sp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="14dp" />
+
+    <!-- Pesquisa -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="14dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_search"
+            android:tint="#1765C1"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Pesquisar contatos" />
+
+        <EditText
+            android:id="@+id/edtBusca"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Buscar contato..."
+            android:inputType="text"
+            android:singleLine="true"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/busca_fundo"
+            android:textColor="#172B4D"
+            android:textColorHint="#718096" />
+
+    </LinearLayout>
+
+    <!-- Título da lista -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seus contatos"
+        android:textColor="#172B4D"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Lista de contatos -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <ListView
+            android:id="@+id/listaContatos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp"
+            android:background="@android:color/transparent"
+            android:clipToPadding="false" />
+
+        <!-- Estado de lista vazia -->
+        <LinearLayout
+            android:id="@id/areaListaVazia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:tint="#1765C1"
+                android:contentDescription="Agenda vazia" />
+
+            <TextView
+                android:id="@id/txtListaVazia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nenhum contato cadastrado"
+                android:textColor="#172B4D"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adicione seu primeiro contato para começar a organizar sua agenda."
+                android:textColor="#718096"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- Botão logo abaixo da lista -->
+    <Button
+        android:id="@+id/btnAdicionar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="+  Adicionar contato"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/botao_fundo"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>
